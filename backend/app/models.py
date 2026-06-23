@@ -12,6 +12,7 @@ class User(Base):
     name = Column(String, nullable=False)
     role = Column(String, nullable=False)  # admin / filler / approver / group_approver
     is_active = Column(Boolean, default=True)
+    wework_userid = Column(String, nullable=True)  # 企业微信UserId，用于SSO登录匹配
 
 
 class RiskItem(Base):

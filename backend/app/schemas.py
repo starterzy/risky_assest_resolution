@@ -18,12 +18,14 @@ class UserCreate(BaseModel):
     password: str
     name: str
     role: str
+    wework_userid: Optional[str] = None
 
 class UserUpdate(BaseModel):
     name: Optional[str] = None
     role: Optional[str] = None
     is_active: Optional[bool] = None
     password: Optional[str] = None
+    wework_userid: Optional[str] = None
 
 class UserOut(BaseModel):
     id: int
@@ -31,6 +33,7 @@ class UserOut(BaseModel):
     name: str
     role: str
     is_active: bool
+    wework_userid: Optional[str] = None
     class Config:
         from_attributes = True
 
